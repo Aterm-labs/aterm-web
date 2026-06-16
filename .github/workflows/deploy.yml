@@ -1,0 +1,65 @@
+# Build + deploy de la landing a GitHub Pages.
+#
+# En push a main construye con Vite y publica `dist/` en Pages. En PR solo
+# construye (sin desplegar) como smoke test. El `base: ./` de vite.config hace
+# que funcione bajo el dominio personalizado (CNAME) sin tocar la config.
+#
+# Requisito una sola vez: en Settings → Pages, «Source» = GitHub Actions.
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Una sola publicación a la vez; no cancela un deploy en curso.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      # El dominio personalizado vive en CNAME (raíz del repo); el deploy por
+      # Actions solo publica dist/, así que lo copiamos dentro del artifact.
+      - name: Preservar dominio personalizado (CNAME)
+        run: cp CNAME dist/CNAME
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    name: deploy
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
