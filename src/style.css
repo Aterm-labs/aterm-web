@@ -1,0 +1,127 @@
+:root {
+  --bg: #0b0e14;
+  --bg-soft: #11151f;
+  --card: #151a26;
+  --border: #232a3a;
+  --fg: #e6e9ef;
+  --muted: #9aa3b2;
+  --brand: #e0883b; /* Claude-ish orange */
+  --brand-2: #6aa6ff;
+  --green: #6bd089;
+  --radius: 14px;
+  --maxw: 1080px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(1200px 600px at 70% -10%, #1a2336 0%, var(--bg) 60%);
+  color: var(--fg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  margin: 0;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.section {
+  padding: 72px 0;
+}
+.section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  text-align: center;
+}
+.section .lead {
+  text-align: center;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 12px auto 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--brand) 0%, #c9722d 100%);
+  color: #1a1206;
+}
+.btn-primary:hover {
+  filter: brightness(1.06);
+}
+.btn-ghost {
+  border-color: var(--border);
+  color: var(--fg);
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--brand-2);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.tag-pro {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--brand) 22%, transparent);
+  color: var(--brand);
+  border: 1px solid color-mix(in srgb, var(--brand) 45%, transparent);
+}
+.tag-free {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--green) 18%, transparent);
+  color: var(--green);
+  border: 1px solid color-mix(in srgb, var(--green) 40%, transparent);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 52px 0;
+  }
+}
