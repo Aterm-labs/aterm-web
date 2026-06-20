@@ -1,19 +1,19 @@
 <script setup>
 const free = [
+  { t: "7 proveedores", d: "Claude Code, Codex, OpenCode, Gemini, Qwen Code, Goose y Factory Droid." },
   { t: "Listar · buscar · reanudar", d: "Todas tus sesiones de cada proveedor, con reanudar en un clic." },
   { t: "Vista previa elegante", d: "La conversación en burbujas, con metadatos y resaltado." },
   { t: "Metadata y organización", d: "Renombrar, etiquetas, color, notas, favoritos e iconos." },
   { t: "Grupos y subproyectos", d: "Agrupa por proveedor, proyecto, fecha o colecciones propias." },
-  { t: "Comandos del proyecto", d: "Slash-commands de .claude/commands, scripts del repo y más." },
-  { t: "MCP server", d: "Deja que tu agente consulte su propio historial de sesiones." },
+  { t: "Comandos del proyecto", d: "Slash-commands, scripts del repo (con argumentos y --help) y más." },
 ];
 const pro = [
   { t: "Comparativa paralela", d: "El mismo prompt con varios agentes, cada uno en su git worktree." },
-  { t: "Plantillas de lanzamiento", d: "Guarda proveedor + prompt + cwd y relanza de un clic." },
-  { t: "Perfiles de espacio de trabajo", d: "Guarda un conjunto de sesiones y reábrelas todas de golpe." },
+  { t: "Portar entre proveedores", d: "Lleva una sesión a otro agente o duplica el proyecto convertido a sus convenciones." },
+  { t: "Servidor MCP", d: "Tu agente consulta su propio historial vía MCP, configurado con un clic." },
+  { t: "Plantillas y perfiles", d: "Guarda proveedor + prompt + cwd, o conjuntos de sesiones, y relánzalos de golpe." },
   { t: "Dashboard Pro", d: "Informe visual con gráficas, filtros por fecha y export CSV." },
-  { t: "Exportar conversación a HTML", d: "Comparte o archiva tus conversaciones con estilo." },
-  { t: "Automatizaciones", d: "Aviso de sesiones idle y resumen diario de actividad y coste." },
+  { t: "Exportar a HTML y automatizaciones", d: "Comparte conversaciones con estilo; avisos de idle y resumen diario." },
 ];
 </script>
 

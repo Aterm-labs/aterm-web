@@ -1,10 +1,10 @@
 // Central config for the landing — edita aquí enlaces y precios.
 
 export const LINKS = {
-  github: "https://github.com/Zarritas/aterm",
+  github: "https://github.com/Aterm-labs/agent-sessions",
   openVsx: "https://open-vsx.org/extension/Zarritas/agent-sessions",
-  // Si publicas en el Marketplace de VS Code, pon aquí la URL del item.
-  marketplace: "",
+  marketplace:
+    "https://marketplace.visualstudio.com/items?itemName=Zarritas.agent-sessions",
   buyAnnual:
     "https://aterm.lemonsqueezy.com/checkout/buy/258755f8-8c93-41ab-b0b0-e8d07fdfcc25",
   buyMonthly:
@@ -17,4 +17,12 @@ export const PRICING = {
   monthly: { price: "3 €", period: "/ mes", note: "factura mensual" },
 };
 
-export const PROVIDERS = ["Claude Code", "Codex", "OpenCode", "Gemini"];
+export const PROVIDERS = [
+  "Claude Code",
+  "Codex",
+  "OpenCode",
+  "Gemini",
+  "Qwen Code",
+  "Goose",
+  "Factory Droid",
+];

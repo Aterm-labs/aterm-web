@@ -4,15 +4,17 @@ import { LINKS, PROVIDERS } from "../site.js";
 const rows = [
   { i: "C", c: "#e0883b", t: "Refactor del panel de sesiones", m: "claude · aterm · ctx 32%" },
   { i: "X", c: "#6bd089", t: "Tests del parser de rollouts", m: "codex · backend · hace 2 h" },
+  { i: "Q", c: "#2ac3de", t: "Migración del esquema", m: "qwen · api · hace 5 h" },
   { i: "O", c: "#6aa6ff", t: "Migración a wgpu", m: "opencode · render · ayer" },
-  { i: "G", c: "#b58bff", t: "Esquema de la API pública", m: "gemini · docs · hace 3 d" },
+  { i: "G", c: "#e0af68", t: "Limpieza de dependencias", m: "goose · infra · ayer" },
+  { i: "D", c: "#f7768e", t: "Esquema de la API pública", m: "droid · docs · hace 3 d" },
 ];
 </script>
 
 <template>
   <section id="top" class="hero">
     <div class="container">
-      <p class="eyebrow">Para Claude Code · Codex · OpenCode · Gemini</p>
+      <p class="eyebrow">Claude Code · Codex · OpenCode · Gemini · Qwen · Goose · Droid</p>
       <h1>
         Tus sesiones de agentes,<br />
         <span class="accent">ordenadas y a un clic</span>
