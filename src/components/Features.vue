@@ -5,9 +5,11 @@ const free = [
   { t: "Vista previa elegante", d: "La conversación en burbujas, con metadatos y resaltado." },
   { t: "Metadata y organización", d: "Renombrar, etiquetas, color, notas, favoritos e iconos." },
   { t: "Grupos y subproyectos", d: "Agrupa por proveedor, proyecto, fecha o colecciones propias." },
-  { t: "Comandos del proyecto", d: "Slash-commands, scripts del repo (con argumentos y --help) y más." },
+  { t: "Estado, quota y slash-commands", d: "Badge de estado por proveedor (clic → su statuspage), uso 5h/7d sin plugins y los slash-commands del agente." },
 ];
 const pro = [
+  { t: "Gráfico de memoria", d: "Mapea la memoria del agente (global / proyecto / local) y créala o edítala con su ayuda, sin tocarla en silencio." },
+  { t: "Scripts del proyecto", d: "npm / Make / just / Cargo agrupados por intérprete, con argumentos y parseo de --help." },
   { t: "Comparativa paralela", d: "El mismo prompt con varios agentes, cada uno en su git worktree." },
   { t: "Portar entre proveedores", d: "Lleva una sesión a otro agente o duplica el proyecto convertido a sus convenciones." },
   { t: "Servidor MCP", d: "Tu agente consulta su propio historial vía MCP, configurado con un clic." },

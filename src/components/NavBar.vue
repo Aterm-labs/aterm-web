@@ -10,9 +10,10 @@ import { LINKS } from "../site.js";
       </a>
       <nav class="links">
         <a href="#features">Funciones</a>
+        <a href="#download">Descargar</a>
         <a href="#pricing">Precios</a>
         <a :href="LINKS.github" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" :href="LINKS.openVsx" target="_blank" rel="noopener">
+        <a class="btn btn-ghost" :href="LINKS.marketplace" target="_blank" rel="noopener">
           Instalar
         </a>
       </nav>

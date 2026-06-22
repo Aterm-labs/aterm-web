@@ -25,12 +25,20 @@ const rows = [
         comandos de proyecto y mucho más.
       </p>
       <div class="cta">
-        <a class="btn btn-primary" :href="LINKS.openVsx" target="_blank" rel="noopener">
-          Instalar gratis
+        <a class="btn btn-primary" :href="LINKS.marketplace" target="_blank" rel="noopener">
+          Instalar · Marketplace
         </a>
-        <a class="btn btn-ghost" href="#pricing">Ver Pro</a>
+        <a class="btn btn-ghost" :href="LINKS.openVsx" target="_blank" rel="noopener">
+          Open VSX
+        </a>
+        <a class="btn btn-ghost" :href="LINKS.releases" target="_blank" rel="noopener">
+          Descargar .vsix
+        </a>
       </div>
-      <p class="micro">Gratis lo esencial · Pro con 14 días de prueba · open-core</p>
+      <p class="micro">
+        Gratis lo esencial · Pro con 14 días de prueba · open-core ·
+        <a :href="LINKS.releases" target="_blank" rel="noopener">instalación manual (.vsix)</a>
+      </p>
 
       <div class="providers">
         <span v-for="p in PROVIDERS" :key="p" class="chip">{{ p }}</span>

@@ -5,6 +5,8 @@ export const LINKS = {
   openVsx: "https://open-vsx.org/extension/Zarritas/agent-sessions",
   marketplace:
     "https://marketplace.visualstudio.com/items?itemName=Zarritas.agent-sessions",
+  // Releases de GitHub: ahí cuelga el .vsix descargable (instalación manual).
+  releases: "https://github.com/Aterm-labs/agent-sessions/releases/latest",
   buyAnnual:
     "https://aterm.lemonsqueezy.com/checkout/buy/258755f8-8c93-41ab-b0b0-e8d07fdfcc25",
   buyMonthly:
