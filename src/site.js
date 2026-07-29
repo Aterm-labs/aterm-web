@@ -13,7 +13,10 @@ export const LINKS = {
     "https://aterm.lemonsqueezy.com/checkout/buy/87d06b1a-b038-434d-9ad3-b58553f4a4ea",
 };
 
-// TODO: ajusta los importes al precio real de tus productos en Lemon Squeezy.
+// Importes reales de los productos en Lemon Squeezy (confirmados 2026-07-29).
+// Si los cambias allí, cámbialos aquí: la web los muestra antes del checkout y
+// una diferencia se lee como precio engañoso. El anual sale a 29 € frente a los
+// 36 € de doce mensualidades — de ahí «2 meses gratis».
 export const PRICING = {
   annual: { price: "29 €", period: "/ año", note: "2 meses gratis" },
   monthly: { price: "3 €", period: "/ mes", note: "factura mensual" },
